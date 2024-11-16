@@ -4,48 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://js.arcgis.com/calcite-components/1.0.0-beta.82/calcite.css">
+    <script type="module" src="https://js.arcgis.com/calcite-components/1.0.0-beta.82/calcite.esm.js"></script>
+    <script nomodule src="https://js.arcgis.com/calcite-components/1.0.0-beta.82/calcite.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">My Portfolio</a>
-    </nav>
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Project 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Project 1</h5>
-                        <p class="card-text">Description of Project 1.</p>
-                        <a href="https://github.com/username/project1" class="btn btn-primary">View Project</a>
-                    </div>
+    <calcite-shell>
+        <calcite-shell-panel slot="primary-panel" position="start">
+            <calcite-panel heading="My Portfolio">
+                <calcite-list>
+                    <calcite-list-item label="Home" href="#"></calcite-list-item>
+                    <calcite-list-item label="Projects" href="#projects"></calcite-list-item>
+                    <calcite-list-item label="About" href="#about"></calcite-list-item>
+                </calcite-list>
+            </calcite-panel>
+        </calcite-shell-panel>
+        <calcite-shell-panel slot="contextual-panel" position="end">
+            <calcite-panel heading="Details">
+                <p>Select a project to see details.</p>
+            </calcite-panel>
+        </calcite-shell-panel>
+        <calcite-shell-center-row>
+            <div class="container">
+                <h1>My Projects</h1>
+                <div class="grid">
+                    <calcite-card>
+                        <img slot="thumbnail" src="https://via.placeholder.com/150" alt="Project 1">
+                        <h3 slot="title">Project 1</h3>
+                        <p slot="subtitle">Description of Project 1.</p>
+                        <calcite-button slot="footer-leading" href="https://github.com/username/project1">View Project</calcite-button>
+                    </calcite-card>
+                    <calcite-card>
+                        <img slot="thumbnail" src="https://via.placeholder.com/150" alt="Project 2">
+                        <h3 slot="title">Project 2</h3>
+                        <p slot="subtitle">Description of Project 2.</p>
+                        <calcite-button slot="footer-leading" href="https://github.com/username/project2">View Project</calcite-button>
+                    </calcite-card>
+                    <calcite-card>
+                        <img slot="thumbnail" src="https://via.placeholder.com/150" alt="Project 3">
+                        <h3 slot="title">Project 3</h3>
+                        <p slot="subtitle">Description of Project 3.</p>
+                        <calcite-button slot="footer-leading" href="https://github.com/username/project3">View Project</calcite-button>
+                    </calcite-card>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Project 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Project 2</h5>
-                        <p class="card-text">Description of Project 2.</p>
-                        <a href="https://github.com/username/project2" class="btn btn-primary">View Project</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Project 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Project 3</h5>
-                        <p class="card-text">Description of Project 3.</p>
-                        <a href="https://github.com/username/project3" class="btn btn-primary">View Project</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        </calcite-shell-center-row>
+    </calcite-shell>
+    <style>
+        .container {
+            padding: 20px;
+        }
+        .grid {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        calcite-card {
+            width: 300px;
+        }
+    </style>
 </body>
 </html>
