@@ -6,24 +6,15 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="https://js.arcgis.com/calcite-components/1.0.0-beta.82/calcite.css">
     <script type="module" src="https://js.arcgis.com/calcite-components/1.0.0-beta.82/calcite.esm.js"></script>
-    <script nomodule src="https://js.arcgis.com/calcite-components/1.0.0-beta.82/calcite.js"></script>
+    <script nomodule="" src="https://js.arcgis.com/calcite-components/1.0.0-beta.82/calcite.js"></script>
 </head>
 <body>
     <calcite-shell>
-        <calcite-shell-panel slot="primary-panel" position="start">
-            <calcite-panel heading="About Me">
-                <p>Hello! I'm [Your Name], a GIS enthusiast and developer. I love working with spatial data and creating innovative GIS solutions.</p>
-                <p>Feel free to explore my projects and get in touch!</p>
-            </calcite-panel>
-        </calcite-shell-panel>
-        <calcite-shell-panel slot="contextual-panel" position="end">
-            <calcite-panel heading="Details">
-                <p>Select a project to see details.</p>
-            </calcite-panel>
-        </calcite-shell-panel>
         <calcite-shell-center-row>
             <div class="container">
-                <h1>My Projects</h1>
+                <header class="header">
+                    <h1>My Portfolio</h1>
+                </header>
                 <div class="grid">
                     <calcite-card>
                         <img slot="thumbnail" src="https://via.placeholder.com/150" alt="Project 1">
@@ -50,6 +41,13 @@
     <style>
         .container {
             padding: 20px;
+        }
+        .header {
+            background-color: #e6e6fa; /* Light purple */
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 20px;
         }
         .grid {
             display: flex;
